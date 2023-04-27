@@ -39,8 +39,8 @@
                         </Border>
 
                         <!--Menu Title-->
-                        <TextBlock Text="Title Name" Foreground="White" FontSize="22" FontWeight="SemiBold" DockPanel.Dock="Top" TextAlignment="Center" Margin="5 25 0 10"/>
-                        <TextBlock Text="Members, France" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold" DockPanel.Dock="Top" TextAlignment="Center"/>
+                        <TextBlock Text="Welcome to Recap" Foreground="White" FontSize="20" FontWeight="SemiBold" DockPanel.Dock="Top" TextAlignment="Center" Margin="5 25 0 10"/>
+                        <TextBlock Text="Select or Create subject" Foreground="#d0bfff" FontSize="14" FontWeight="SemiBold" DockPanel.Dock="Top" TextAlignment="Center"/>
 
                         <!--Menu separator-->
                         <Separator Margin="25" DockPanel.Dock="Top" Height="0.8" Background="#7e5fdc"/>
@@ -50,35 +50,20 @@
                             <Button Style="{StaticResource menuButton}">
                                 <StackPanel Orientation="Horizontal">
                                     <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Dashboard"/>
+                                    <TextBlock Text="Subjects"/>
                                 </StackPanel>
                             </Button>
 
                             <Button Style="{StaticResource menuButton}">
                                 <StackPanel Orientation="Horizontal">
-                                    <Icon:PackIconMaterial Kind="CalendarClock" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Schedule"/>
+                                    <Icon:PackIconMaterial Kind="Book" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Questions"/>
                                 </StackPanel>
                             </Button>
-
-                            <Button Style="{StaticResource menuButton}" Background="#7b5cd6" Foreground="white">
-                                <StackPanel Orientation="Horizontal">
-                                    <Icon:PackIconMaterial Kind="AccountMultipleOutline" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Workroom"/>
-                                </StackPanel>
-                            </Button>
-
                             <Button Style="{StaticResource menuButton}">
                                 <StackPanel Orientation="Horizontal">
-                                    <Icon:PackIconMaterial Kind="CashMultiple" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Wallet"/>
-                                </StackPanel>
-                            </Button>
-
-                            <Button Style="{StaticResource menuButton}">
-                                <StackPanel Orientation="Horizontal">
-                                    <Icon:PackIconMaterial Kind="ForumOutline" Style="{StaticResource menuButtonIcon}"/>
-                                    <TextBlock Text="Messages"/>
+                                    <Icon:PackIconMaterial Kind="SearchWeb" Style="{StaticResource menuButtonIcon}"/>
+                                    <TextBlock Text="Online refference"/>
                                 </StackPanel>
                             </Button>
 
@@ -113,16 +98,7 @@
                 </Grid.RowDefinitions>
 
                 <!--Search Textbook-->
-                <Grid Width="300" HorizontalAlignment="Left" Margin="0,0,0,62" Grid.RowSpan="2">
-                    <TextBlock Margin="20 0" VerticalAlignment="Center" Foreground="#b0b9c6" IsHitTestVisible="False" 
-                               Panel.ZIndex="1" Text="Search here..."
-                               Visibility="{Binding ElementName=txtSearch, Path=Text.IsEmpty, Converter={StaticResource BoolToVis}}"/>
-
-                    <TextBox x:Name="txtSearch" Style="{StaticResource textboxSearch}"/>
-
-                    <Icon:PackIconMaterial Kind="Magnify" Width="15" Height="15" VerticalAlignment="Center"
-                                           Margin="0 0 15 0" Foreground="#b0b9c6" HorizontalAlignment="Right"/>
-                </Grid>
+                <Grid Width="300" HorizontalAlignment="Left" Margin="0,0,0,62" Grid.RowSpan="2"/>
 
                 <!--Top Buttons-->
                 <Button Style="{StaticResource topButton}" Margin="0,14,20,13.6" Background="#dcdcdc" HorizontalAlignment="Right" Grid.Column="1">
@@ -134,7 +110,7 @@
                 </Button>
 
                 <!--Page Title-->
-                <TextBlock Text="Workroom" Grid.Row="1" FontSize="32" FontWeight="SemiBold" Margin="0,20.4,0,43.8" HorizontalAlignment="Left" Foreground="#121518" Grid.RowSpan="2"/>
+                <TextBlock Text="Subjects" FontSize="32" FontWeight="SemiBold" Margin="10,23,0,64" HorizontalAlignment="Left" Foreground="#121518" Grid.RowSpan="2"/>
 
                 <!--Add button-->
                 <Button Name="addButton" Style="{StaticResource addButton}" Click="addButton_Click" Grid.Column="1" Margin="0,23.4,0,4">
@@ -148,20 +124,17 @@
                 <Separator Height="1" Grid.Row="2" Background="#dae2ea" Margin="0,44,0,9.4" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
 
                 <!--Tap Buttons-->
-                <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,10,0,9.4" Grid.ColumnSpan="2" Grid.RowSpan="2">
-                    <Button Content="Task" Style="{StaticResource tabButton}" BorderBrush="#784ff2"/>
-                    <Button Content="Quiz" Style="{StaticResource tabButton}"/>
-                </StackPanel>
+
 
                 <!--Counter Title-->
-                <TextBlock Text="Reviewer List" Grid.Row="4" FontSize="18" FontWeight="SemiBold" Foreground="#121518"
-                           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,13.6,0,14.4"/>
+                <TextBlock Text="Reviewer List" Grid.Row="2" FontSize="18" FontWeight="SemiBold" Foreground="#121518"
+                           HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,6,0,24" Grid.RowSpan="2"/>
 
-                <TextBlock Text="Filter by" Grid.Row="4" FontSize="13" FontWeight="SemiBold" Margin="0,17.6,214,16.4" Foreground="#121518"
+                <TextBlock Text="Filter by" Grid.Row="3" FontSize="13" FontWeight="SemiBold" Margin="0,26,223,17" Foreground="#121518"
                            HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column="1"/>
 
                 <!--Filter Textbook-->
-                <Grid Width="200" HorizontalAlignment="Right" Grid.Row="3" Grid.Column="1" Margin="0,9.2,0,0.4" Grid.RowSpan="2">
+                <Grid Width="200" HorizontalAlignment="Right" Grid.Row="2" Grid.Column="1" Margin="0,10,12,0" Grid.RowSpan="2">
                     <TextBlock Margin="15 0" VerticalAlignment="Center" Foreground="#b0b9c6" IsHitTestVisible="False" 
                                Panel.ZIndex="1" Text="Search in Titles ..."
                                Visibility="{Binding ElementName=txtFilter, Path=Text.IsEmpty, Converter={StaticResource BoolToVis}}"/>
@@ -170,7 +143,7 @@
                 </Grid>
 
                 <!--Members Data Grid-->
-                <DataGrid RowStyle="{DynamicResource DataGridRowStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" Style="{DynamicResource DataGridStyle1}"  Grid.Row="5" x:Name="membersDataGrid" Grid.ColumnSpan="2" Margin="0,9.6,0,0.2">
+                <DataGrid RowStyle="{DynamicResource DataGridRowStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" Style="{DynamicResource DataGridStyle1}"  Grid.Row="5" x:Name="membersDataGrid" Grid.ColumnSpan="2" Margin="0" Height="427" VerticalAlignment="Bottom">
                     <DataGrid.Columns>
                         <DataGridCheckBoxColumn CanUserResize="False" Width="auto" EditingElementStyle="{StaticResource CheckBoxStyle1}">
                             <DataGridCheckBoxColumn.HeaderTemplate>
@@ -196,10 +169,10 @@
                             </DataGridTemplateColumn.CellTemplate>
                         </DataGridTemplateColumn>
 
-                        <DataGridTextColumn Header="Date" IsReadOnly="True" Width="*" Binding="{Binding Position}"/>
+                        
                         <DataGridTextColumn Header="Category" IsReadOnly="True" Width="*" Binding="{Binding Email}"/>
 
-                        <DataGridTemplateColumn Header="Operations" IsReadOnly="True" Width="auto">
+                        <DataGridTemplateColumn Header="Items" IsReadOnly="True" Width="auto">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
@@ -218,37 +191,6 @@
                 </DataGrid>
 
                 <!--Pagination Section-->
-                <Border Grid.Row="6" HorizontalAlignment="Right" BorderBrush="#dee4ec" BorderThickness="1" CornerRadius="5"
-                        Padding="5" Background="White" Margin="0,9.8,10,10" Grid.Column="1">
-                    <StackPanel Orientation="Horizontal">
-
-                        <Button Style="{StaticResource pagingButton}">
-                            <Icon:PackIconMaterial Kind="ChevronLeft" Style="{StaticResource paginButtonIcon}"/>
-                        </Button>
-
-                        <Rectangle Width="1" Fill="#dee4ec" Margin="3 7"/>
-
-                        <Button Style="{StaticResource pagingButton}" Content="1"/>
-                        <Button Style="{StaticResource pagingButton}" Content="2" Background="#7950f2" Foreground="#fff"/>
-                        <Button Style="{StaticResource pagingButton}" Content="3"/>
-
-                        <TextBlock Text="..." Foreground="#6c7682" VerticalAlignment="Center" FontSize="15" Margin="10 0"/>
-
-                        <Button Style="{StaticResource pagingButton}" Content="7"/>
-                        <Button Style="{StaticResource pagingButton}" Content="8"/>
-                        <Button Style="{StaticResource pagingButton}" Content="9"/>
-
-                        <Rectangle Width="1" Fill="#dee4ec" Margin="3 7"/>
-
-                        <Button Style="{StaticResource pagingButton}">
-                            <Icon:PackIconMaterial Kind="ChevronRight" Style="{StaticResource paginButtonIcon}"/>
-                        </Button>
-
-
-
-                    </StackPanel>
-
-                </Border>
 
 
             </Grid>

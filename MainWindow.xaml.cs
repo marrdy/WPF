@@ -16,7 +16,7 @@ namespace WPF
             var converter = new BrushConverter();
 
             //Create DataGrid Items Info
-            members.Add(new Member { Number = "1", Character = "J", BgColor = (Brush)converter.ConvertFromString("#1098ad"), Name = "John Doe", Position = "Coach", Email = "qwe@gmail.com", Phone = "0950231232" });
+           /* members.Add(new Member { Number = "1", Character = "J", BgColor = (Brush)converter.ConvertFromString("#1098ad"), Name = "John Doe", Position = "Coach", Email = "qwe@gmail.com", Phone = "0950231232" });
             members.Add(new Member { Number = "2", Character = "R", BgColor = (Brush)converter.ConvertFromString("#1e88e5"), Name = "Reza Alavi", Position = "Administrator", Email = "zxce@gmail.com", Phone = "0950231232" });
             members.Add(new Member { Number = "3", Character = "D", BgColor = (Brush)converter.ConvertFromString("#ff8f00"), Name = "Denis Castilo", Position = "Manager", Email = "23123sae@gmail.com", Phone = "0950231232" });
             members.Add(new Member { Number = "4", Character = "G", BgColor = (Brush)converter.ConvertFromString("#ff5252"), Name = "Gabriel Cox", Position = "Manager", Email = "zx23sae@gmail.com", Phone = "0950231232" });
@@ -26,7 +26,7 @@ namespace WPF
             members.Add(new Member { Number = "8", Character = "A", BgColor = (Brush)converter.ConvertFromString("#ff5252"), Name = "Ali Pormand", Position = "Manager", Email = "23121@gmail.com", Phone = "0950231232" });
             members.Add(new Member { Number = "9", Character = "F", BgColor = (Brush)converter.ConvertFromString("#1e88e5"), Name = "Frank Underwood", Position = "Manager", Email = "mopop@gmail.com", Phone = "0950231232" });
             members.Add(new Member { Number = "10", Character = "S", BgColor = (Brush)converter.ConvertFromString("#0ca678"), Name = "Saed Dasma", Position = "Coach", Email = "086hfg@gmail.com", Phone = "0950231232" });
-
+           */
             membersDataGrid.ItemsSource = members;
         }
 
